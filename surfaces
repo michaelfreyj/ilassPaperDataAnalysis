@@ -1,0 +1,114 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes out surface files with interpolated field data in VTK format, e.g.
+    cutting planes, iso-surfaces and patch boundary surfaces.
+
+    This file includes a selection of example surfaces, each of which the user
+    should configure and/or remove.
+
+\*---------------------------------------------------------------------------*/
+
+#includeEtc "caseDicts/postProcessing/visualization/surfaces.cfg"
+
+fields       (rhoV rhoL alphaFrac x rhog rhoBar rho y p U);
+
+
+p1 (-0.000440 0 0);
+p2 (-0.000545 0 0);
+p3 (-0.000650 0 0);
+p4 (-0.000755 0 0);
+p5 (-0.000860 0 0);
+
+
+surfaces
+(
+    x304
+    {
+        $cuttingPlane;
+	pointAndNormalDict
+        {
+            basePoint    $p1;
+            normalVector $x;
+        }
+    }
+
+    x354
+    {
+        $cuttingPlane;
+	pointAndNormalDict
+        {
+            basePoint    $p2;
+            normalVector $x;
+        }
+    }
+
+    x404
+    {
+        $cuttingPlane;
+	pointAndNormalDict
+        {
+            basePoint    $p3;
+            normalVector $x;
+        }
+    }
+
+    x454
+    {
+        $cuttingPlane;
+	pointAndNormalDict
+        {
+            basePoint    $p4;
+            normalVector $x;
+        }
+    }
+
+    x504
+    {
+        $cuttingPlane;
+	pointAndNormalDict
+        {
+            basePoint    $p5;
+            normalVector $x;
+        }
+    }
+
+//    yNormal
+//    {
+//        $cuttingPlane;
+//        pointAndNormalDict
+//        {
+//            normalVector $y;      // Overrides default normalVector (1 0 0)
+//        }                         // $y: macro for (0 1 0)
+//    }
+//
+//    zNormal
+//    {
+//        $cuttingPlane;
+//        pointAndNormalDict
+//        {
+//            basePoint    (0 0 2); // Overrides default basePoint (0 0 0)
+//            normalVector $z;      // $z: macro for (0 0 1)
+//        }
+//    }
+//
+//    p100
+//    {
+//        $isosurface;
+//        isoField    p;
+//        isoValue    100;
+//    }
+//
+//    CAD
+//    {
+//        $patchSurface;
+//        patches     (CAD);
+//    }
+);
+
+// ************************************************************************* //
