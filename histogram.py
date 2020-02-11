@@ -3,6 +3,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pyvista as vtki
 
+wdir = os.getcwd()
 startPic    =   104     # start of nozzle
 endPic      =   570     # last pic
 threshold   =   0.5     # threshold for LVF using exp data
