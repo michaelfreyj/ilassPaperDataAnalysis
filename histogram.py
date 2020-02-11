@@ -2,6 +2,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import pyvista as vtki
+import os
 
 wdir = os.getcwd()
 startPic    =   104     # start of nozzle
