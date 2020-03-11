@@ -9,6 +9,7 @@
 # Python bytecode/cache
 __pycache__
 *.pyc
+*.npy
 
 # Objects and archives - anywhere
 *.[oa]
