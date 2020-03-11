@@ -1,0 +1,30 @@
+# Editor and misc backup files - anywhere                                           
+*~
+.*~
+.*.swp
+*.bak
+*.bak[0-9][0-9]
+\#*\#
+
+# Python bytecode/cache
+__pycache__
+*.pyc
+
+# Objects and archives - anywhere
+*.[oa]
+*.la
+*.so
+
+# Source packages - anywhere
+*.tar.bz2
+*.tar.gz
+*.tar
+*.tgz
+*.gtgz
+
+# Experimental data files
+CT_data/
+Geometry/
+6mpa/
+3/
+
