@@ -23,4 +23,3 @@ Added the array created from aformentioned script: `CT_data.npy`
 Created a small script to load the 3D image array, make a transverse slice, and display that transvers image.
 
 
-
