@@ -12,7 +12,15 @@ pics = np.array([200,300])
 ```
 
 
-This is a fancy section title
------------------------------
+## Updates 2020-03-11 (MF)
+
+Created wrote a script to get LVF vs nozzle axis, `LVF_plot.py`.
+
+Created script to create a 3D array of the image stack, `make_3D_image_array.py`
+
+Added the array created from aformentioned script: `CT_data.npy`
+
+Created a small script to load the 3D image array, make a transverse slice, and display that transvers image.
+
 
 

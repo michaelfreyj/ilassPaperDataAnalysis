@@ -16,6 +16,7 @@ __pycache__
 *.so
 
 # Source packages - anywhere
+*.zip
 *.tar.bz2
 *.tar.gz
 *.tar
