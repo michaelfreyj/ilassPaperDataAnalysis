@@ -10,6 +10,7 @@ trans_slice = image_stack[:,:,164]
 # transpose to show flow from left to right
 # instead of top to bottom
 trans_slice_T = trans_slice.transpose()
+trans_slice_T = np.ma.masked_where(trans_slice_T < 0.001, trans_slice_T)
 
-plt.imshow(trans_slice_T)
+plt.imshow(trans_slice_T, cmap='gray')
 plt.show()
