@@ -1,7 +1,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-image_stack = np.load('CT_data.npy')
+try:
+    image_stack = np.load('CT_data.npy')
+except FileNotFoundError:
+    try:
+        startPic    =   104     # start of nozzle
+        endPic      =   570     # last pic
+        pics = np.arange(startPic, endPic+1)
+        image_stack = np.zeros([pics.size,328,328])
+
+        for i, var in enumerate(pics):
+            img = plt.imread('CT_data/CT_data%s.tif' % var)
+            img = img/65535.0
+            img = np.ma.masked_equal(img,0)
+            
+            image_stack[i,:,:] = img
+
+        np.save('CT_data.npy', image_stack)
+    except FileNotFoundError:
+        exit("Please make sure the CT_data files are in the right location")
+
 image_stack.shape
 
 # slice at the midpoint
