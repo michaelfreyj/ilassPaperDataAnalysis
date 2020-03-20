@@ -16,7 +16,8 @@ axial_distance = np.arange(0,978.7,2.1)
 # pics= np.array([304,354,404,454,504])
 pics = np.arange(startPic, endPic+1)
 
-# make cummulative histogram and define threshold as highest point in the
+# Find a threshold
+# make cummulative histogram and define threshold as lowest point in the
 # valley
 
 # image_stack = np.load('CT_data.npy')
